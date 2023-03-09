@@ -1,5 +1,4 @@
 # exercise 5.3
-# exercise 5.2
 import numpy as np
 
 x_values = np.linspace(-4, 4, 41)  # starting value, ending value, how many values
