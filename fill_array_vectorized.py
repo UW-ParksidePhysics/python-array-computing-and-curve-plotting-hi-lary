@@ -1,11 +1,15 @@
 # exercise 5.3
+# exercise 5.2
 import numpy as np
-from math import sqrt, pi, exp
 
-x_values_array = np.linspace(-4, 4, 41)  # starting value, ending value, how many values
-x_array = np.empty(41)
-y_array = np.empty(41)
-for x in x_values_array:
-    x_array.append(x)
-    h = (1 / sqrt(2 * pi)) * exp((-1 / 2) * x ** 2)
-print(x_array)
+x_values = np.linspace(-4, 4, 41)  # starting value, ending value, how many values
+
+
+def h(x):
+    return (1 / np.sqrt(2 * np.pi)) * np.exp((-1 / 2) * x ** 2)
+
+
+y_values = h(x_values)
+
+print(x_values)
+print(y_values)
