@@ -35,8 +35,36 @@ def temperature(z, t):
     return function
 
 
+plt.plot(build_array()[0], temperature(build_array()[0], build_array()[1]), color='pink', label='y(t)')
+plt.xlabel('time (s)')
+plt.ylabel('temperature(z, t)')
+plt.show()
+
 # frames = np.linspace(initial time, final time, intervals)
-# def update(frames):
+"""
+fig, ax = plt.subplots()
+x = build_array()[0]
+y = temperature(build_array()[0], build_array()[1])
+ax.clear()
+line = ax.plot(x, y)
+ax.set_xlim([0, len(build_array()[0])])
+ax.set_ylim([0, len(build_array()[1])])
+
+
+def update():
+    # Calculate the new y-values for the line
+    y = temperature(build_array()[0], build_array()[1])
+    # Update the data for the line object
+    line = set_data(x, y)
+    # Return the line object
+    return line,
+
+
+animate = ani.FuncAnimation(fig, update, frames=20, interval=500, repeat=False)
+plt.show()
 # def animate(final_time, delta_time, depth, function_array):
-if __name__ == "__main__":
-    print(temperature(build_array()[0], build_array()[1]))
+
+
+# if __name__ == "__main__":
+#   print(temperature(build_array()[0], build_array()[1]))
+"""
